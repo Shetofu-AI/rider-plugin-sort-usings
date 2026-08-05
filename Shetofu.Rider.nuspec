@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Shetofu.Rider</id>
+    <version>1.0.0</version>
+    <authors>Shetofu AI</authors>
+    <owners>Shetofu AI</owners>
+    <description>Code cleanup extras for C# projects.</description>
+    <dependencies>
+      <dependency id="Wave" version="[$wave$]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Shetofu.Rider.dll" target="dotFiles" />
+  </files>
+</package>

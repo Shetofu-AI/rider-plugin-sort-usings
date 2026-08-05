@@ -1,0 +1,10 @@
+<idea-plugin require-restart="true">
+  <id>uk.shetofu.rider</id>
+  <version>1.0.0</version>
+  <!-- без until-build: локальный плагин, иначе каждое обновление Rider его отключает -->
+  <idea-version since-build="261.0" />
+  <name>Shetofu</name>
+  <vendor>Shetofu AI</vendor>
+  <depends>com.intellij.modules.rider</depends>
+  <description><![CDATA[<p>Code cleanup extras for C# projects.</p>]]></description>
+</idea-plugin>

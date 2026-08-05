@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>Shetofu.Rider</AssemblyName>
+    <RootNamespace>Shetofu.Rider</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDynamicLoading>false</EnableDynamicLoading>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- имя папки врёт: внутри Rider 2026.2 (обновляется in-place) -->
+    <RiderHome Condition="'$(RiderHome)' == ''">C:\Program Files\JetBrains\JetBrains Rider 2024.3.6</RiderHome>
+    <ReSharperHost Condition="'$(ReSharperHost)' == ''">$(RiderHome)\lib\ReSharperHost</ReSharperHost>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="JetBrains.Platform.ComponentModel">
+      <HintPath>$(ReSharperHost)\JetBrains.Platform.ComponentModel.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.Core">
+      <HintPath>$(ReSharperHost)\JetBrains.Platform.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.DocumentModel">
+      <HintPath>$(ReSharperHost)\JetBrains.Platform.DocumentModel.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ProjectModel">
+      <HintPath>$(ReSharperHost)\JetBrains.Platform.ProjectModel.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.Shell">
+      <HintPath>$(ReSharperHost)\JetBrains.Platform.Shell.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.Util">
+      <HintPath>$(ReSharperHost)\JetBrains.Platform.Util.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Daemon.CSharp">
+      <HintPath>$(ReSharperHost)\JetBrains.ReSharper.Daemon.CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Feature.Services">
+      <HintPath>$(ReSharperHost)\JetBrains.ReSharper.Feature.Services.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi">
+      <HintPath>$(ReSharperHost)\JetBrains.ReSharper.Psi.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.CSharp">
+      <HintPath>$(ReSharperHost)\JetBrains.ReSharper.Psi.CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
